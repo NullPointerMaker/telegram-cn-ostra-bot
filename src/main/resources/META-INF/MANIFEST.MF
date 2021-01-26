@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: npDev.telegramBot.cnOstra.Bot
+Class-Path: . java-telegram-bot-api-5.0.0.jar okio-1.15.0.jar gson-2.8.6.j
+ ar ormlite-core-4.48.jar okhttp-3.12.10.jar ormlite-jdbc-4.48.jar loggi
+ ng-interceptor-3.12.10.jar sqlite-jdbc-3.7.2.jar
+
