@@ -1,5 +1,6 @@
 # Telegram CN Ostra Bot
 Telegram 机器人：群组自治管理。
+
 受理群成员对群内消息的举报，发起公投，裁判处理。
 
 ## 如何使用
