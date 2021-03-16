@@ -1,7 +1,7 @@
 #!/bin/bash
-cd `dirname ${BASH_SOURCE}`
-name=$(basename $BASH_SOURCE)
-command="java -jar telegram-cn-ostra-bot.jar"
+cd `dirname $BASH_SOURCE`
+name=`basename $BASH_SOURCE | cut -d . -f1`
+command="java -jar $name.jar"
 function doStart {
 	pid=`pidof $name`
 	if [ ! $pid ] ; then
