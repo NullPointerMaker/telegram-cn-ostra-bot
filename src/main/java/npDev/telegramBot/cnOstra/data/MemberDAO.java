@@ -22,7 +22,7 @@ public class MemberDAO {
     }
 
     //	public static Member queryForChatAndUser(long chatID,int userID) {Member r = new Member(chatID,userID);List<Member> list=queryForMatching(r);if(list.size()==0){r.resetFlag();}else{r=list.get(0);}return r;}
-    public static Member queryForChatAndUser(long chatID, int userID) {
+    public static Member queryForChatAndUser(long chatID, long userID) {
         Member m = new Member(chatID, userID);
         return queryForId(m.getId());
     }

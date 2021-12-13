@@ -13,11 +13,11 @@ public class VoteCount {
     @DatabaseField(columnName = VOTE, canBeNull = false, foreign = true)
     private Vote vote;
     @DatabaseField(columnName = USER, canBeNull = false)
-    private Integer user;
+    private Long user;
     @DatabaseField(columnName = OPTION, canBeNull = false)
     private Byte option;
 
-    public VoteCount(Vote vote, Integer user, Byte option) {
+    public VoteCount(Vote vote, Long user, Byte option) {
         setVote(vote);
         setUser(user);
         setId(vote.getId() + "@" + user);
@@ -45,11 +45,11 @@ public class VoteCount {
         this.vote = vote;
     }
 
-    public int getUser() {
+    public long getUser() {
         return user;
     }
 
-    public void setUser(Integer user) {
+    public void setUser(Long user) {
         this.user = user;
     }
 
@@ -66,7 +66,7 @@ public class VoteCount {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + user;
+        result = prime * result + ((user == null) ? 0 : user.hashCode());
         result = prime * result + ((vote == null) ? 0 : vote.hashCode());
         return result;
     }

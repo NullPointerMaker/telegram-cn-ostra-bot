@@ -22,7 +22,7 @@ public class Member {
     Member() {
     }
 
-    public Member(long chatID, int userID) {
+    public Member(long chatID, long userID) {
         setId(chatID, userID);
     }
 
@@ -35,7 +35,7 @@ public class Member {
         this.id = id;
     }
 
-    void setId(long chatID, int userID) {
+    void setId(long chatID, long userID) {
         this.id = chatID + "@" + userID;
     }
 

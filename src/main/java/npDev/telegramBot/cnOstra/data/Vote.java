@@ -9,15 +9,15 @@ public class Vote {
     @DatabaseField(id = true)
     private String id;
     @DatabaseField(canBeNull = false, columnName = REPORTER)
-    private int reporter;
+    private long reporter;
     @DatabaseField(canBeNull = false, columnName = REPORTED_MESSAGE)
     private String reportedMessage;
     @DatabaseField(canBeNull = false, columnName = REPORTED_USER)
-    private int reportedUser;
+    private long reportedUser;
     @DatabaseField(columnName = FINISHED)
     private Boolean finished;
 
-    public Vote(String id, int reporter, String reportedMessage, int reportedUser) {
+    public Vote(String id, long reporter, String reportedMessage, long reportedUser) {
         setId(id);
         setReporter(reporter);
         setReportedMessage(reportedMessage);
@@ -39,11 +39,11 @@ public class Vote {
         return Long.parseLong(id.split("/")[0]);
     }
 
-    public int getReporter() {
+    public long getReporter() {
         return reporter;
     }
 
-    public void setReporter(int reporter) {
+    public void setReporter(long reporter) {
         this.reporter = reporter;
     }
 
@@ -56,11 +56,11 @@ public class Vote {
         this.reportedMessage = reportedMessage;
     }
 
-    public int getReportedUser() {
+    public long getReportedUser() {
         return reportedUser;
     }
 
-    public void setReportedUser(int reportedUser) {
+    public void setReportedUser(long reportedUser) {
         this.reportedUser = reportedUser;
     }
 
