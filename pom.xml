@@ -5,7 +5,7 @@
     <parent>
         <artifactId>telegram-bot</artifactId>
         <groupId>npDev.telegramBot</groupId>
-        <version>2021.3.16</version>
+        <version>2021.12.13</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>telegram-cn-ostra-bot</artifactId>
@@ -25,7 +25,7 @@
         <dependency>
             <groupId>npDev.telegramBot</groupId>
             <artifactId>telegram-bot</artifactId>
-            <version>2021.3.16</version>
+            <version>2021.12.13</version>
         </dependency>
         <dependency>
             <groupId>com.j256.ormlite</groupId>
