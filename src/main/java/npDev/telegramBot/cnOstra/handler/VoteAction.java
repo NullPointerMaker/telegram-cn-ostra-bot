@@ -54,7 +54,7 @@ public class VoteAction {
         }
         String data = ballot.getData();
         // Option option=Option.values()[Integer.valueOf(data)];
-        int voteUserId = voter.getID();
+        long voteUserId = voter.getID();
         byte option = Byte.parseByte(data);
         if (VoteCountDAO.countOfVoteUserAndOption(vote, voteUserId, option) > 0) {// 和上次点击一样
             ballot.doAnswer(bot, "不要重复点击。", true);// 反馈
@@ -120,7 +120,7 @@ public class VoteAction {
             }
 //			float ratio=counts[maxIndex]>=conf.getVoteValid()?(float)counts[maxIndex]/(float)totalCounts:0;
             float ratio = totalCounts >= bot.getVoteValid() ? (float) counts[maxIndex] / (float) totalCounts : 0;
-            int reporterID = vote.getReporter();
+            long reporterID = vote.getReporter();
             Member reporterMember = MemberDAO.queryForChatAndUser(chat.getID(), reporterID);
             if (reporterMember == null) {
                 reporterMember = new Member(chat.getID(), reporterID);
@@ -134,7 +134,7 @@ public class VoteAction {
                 switch (option) {
                     case 恶意行为:
                         reporterMember.resetFlag();
-                        int reportedUserID = vote.getReportedUser();
+                        long reportedUserID = vote.getReportedUser();
 //					Member reportedMember =MemberDao.queryForChatAndUser(chatId, reportedUserID);
                         ChatMemberOstra reportedChatMember = ChatMemberOstra.cast(result.getChat().doGetChatMember(bot, reportedUserID));
 //					if(reportedMember.isValid()){//没被处罚

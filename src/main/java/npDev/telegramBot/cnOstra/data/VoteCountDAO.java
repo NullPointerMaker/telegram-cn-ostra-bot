@@ -45,7 +45,7 @@ public class VoteCountDAO {
         return list;
     }
 
-    public static int countOfVoteUserAndOption(Vote vote, Integer user, Byte option) {
+    public static int countOfVoteUserAndOption(Vote vote, Long user, Byte option) {
         int count = 0;
         try {
             QueryBuilder<VoteCount, String> qb = getDao().queryBuilder();
